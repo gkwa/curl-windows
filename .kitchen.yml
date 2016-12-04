@@ -1,0 +1,22 @@
+---
+driver:
+  name: vagrant
+  vagrantfiles:
+  - VagrantAdditionalConfig.rb
+
+provisioner:
+  name: chef_zero
+
+platforms:
+- name: curl-win2008r2-standard
+  driver_config:
+    communicator: winrm
+
+suites:
+- name: default
+  run_list:
+  - recipe[curl-windows::default]
+  verifier:
+    inspec_tests:
+    - test/recipes
+  attributes:
