@@ -21,7 +21,7 @@ describe 'curl-windows::default' do
     it 'downloads zipfile' do
       url = 'https://www.apachelounge.com/download/VC14/binaries/curl-7.51.0-win32-VC14.zip'
       # expect(chef_run).to create_remote_file("#{Chef::Config['file_cache_path']}\\#{filename_from_url(url)}")
-      expect(chef_run).to create_remote_file('zipfile_download').with(use_conditional_get: true)
+      expect(chef_run).to create_remote_file('zipfile_download')
     end
 
     it 'notifies the extraction' do
