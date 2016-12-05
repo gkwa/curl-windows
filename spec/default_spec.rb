@@ -5,7 +5,7 @@ describe 'curl-windows::default' do
   require 'chefspec'
 
   describe 'curl-windows::default' do
-    let(:chef_run) { ChefSpec::SoloRunner.new(platform: 'windows', version: '2012').converge(described_recipe) }
+    let(:chef_run) { ChefSpec::SoloRunner.new(platform: 'windows', version: '2008R2').converge(described_recipe) }
 
 
     # it 'deletes a file with an explicit action' do
