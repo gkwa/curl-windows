@@ -7,6 +7,7 @@ describe 'curl-windows::default' do
   describe 'curl-windows::default' do
     let(:chef_run) { ChefSpec::SoloRunner.new(platform: 'windows', version: '2012').converge(described_recipe) }
 
+
     # it 'deletes a file with an explicit action' do
     #   expect(chef_run).to delete_file('/tmp/explicit_action')
     #   expect(chef_run).to_not delete_file('/tmp/not_explicit_action')
@@ -33,6 +34,7 @@ describe 'curl-windows::default' do
     # end
 
   end
+
 
   #
   # context 'windows' do
@@ -71,10 +73,6 @@ describe 'curl-windows::default' do
   #
   #   end
   # end
-
-
-
-
 
   # before do
   #   Fauxhai.mock(platform: 'windows', version: '2012') do |node|

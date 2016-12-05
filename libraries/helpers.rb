@@ -10,3 +10,4 @@ end
 
 Chef::Recipe.send(:include, CurlWindows::Helper)
 Chef::Resource.send(:include, CurlWindows::Helper)
+
